@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct project_omniApp: App {
+    @State private var authManager = AuthManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if authManager.session != nil {
+                    HomeView()
+                } else {
+                    LoginView()
+                }
+            }
+            .environment(authManager)
         }
     }
 }
