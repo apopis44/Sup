@@ -21,7 +21,7 @@ struct LoginView: View {
 
                         authPanel
                     }
-                    .padding(.horizontal, 22)
+                    .padding(.horizontal, 21)
                     .padding(.vertical, 64)
                     .frame(maxWidth: 520)
                     .frame(maxWidth: .infinity)
